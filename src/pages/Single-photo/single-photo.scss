@@ -1,0 +1,17 @@
+.single-photo__wrapper{
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+
+    .single-photo__image{
+    width: 600px;
+    height: 500px;
+    background-color: rgba(156, 182, 205, 0.447);
+    margin-bottom: 40px;
+    border-radius: 20px;
+    }
+}
