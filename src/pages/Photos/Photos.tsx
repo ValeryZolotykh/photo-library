@@ -4,7 +4,6 @@ import "./photos.scss";
 import OnePhoto from "./components/One-photo";
 import { IPhotos } from "../../common/interfaces/Photos";
 import { MIN_DELAY, MAX_DELAY } from "../../common/constants/constants";
-import { SCROLL_THRESHOLD } from "../../common/constants/constants";
 
 export default function Photos() {
   const [photos, setPhotos] = useState<IPhotos[]>([]);
@@ -46,7 +45,7 @@ export default function Photos() {
     the total height of the document minus a gap.*/
     if (
       window.innerHeight + document.documentElement.scrollTop >=
-      document.documentElement.offsetHeight - SCROLL_THRESHOLD // Add a gap of 100px
+      document.documentElement.offsetHeight - 1 // Add a gap of 1px
     ) {
       fetchPhotos(); // Load more photos
     }
