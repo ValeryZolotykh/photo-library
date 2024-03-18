@@ -18,7 +18,8 @@ export default function Favorites() {
     }
   }, []);
 
-  const photosList = favoritesPhotoUrls?.map((photoUrl, index) => (
+  //Index of current photo in the array is the ID for this photo.
+  const favoritesPhotosList = favoritesPhotoUrls?.map((photoUrl, index) => (
     <Link to={`/photos/${index}`} key={index}>
       <img
         className="favorites__item"
@@ -31,7 +32,7 @@ export default function Favorites() {
 
   return (
     <div className="favorites__wrapper">
-      <div className="favorites__items">{photosList}</div>
+      <div className="favorites__items">{favoritesPhotosList}</div>
     </div>
   );
 }

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Header from "./common/layouts/Heade/Header";
+import Header from "./common/layouts/Header/Header";
 
 // Lazy loading components
 const Photos = lazy(() => import("./pages/Photos/Photos"));
