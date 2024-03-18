@@ -52,14 +52,14 @@ export default function Photos() {
     }
   };
 
-  const photosList = photos.map((photo, index) => (
+  const randomPhotosList = photos.map((photo, index) => (
     <OnePhoto key={index} photoData={photo} />
   ));
 
 
   return (
     <div className="photos__wrapper">
-      {photosList}
+      {randomPhotosList}
       {loading && <div className="photos__loader">Loading...</div>}
     </div>
   );
