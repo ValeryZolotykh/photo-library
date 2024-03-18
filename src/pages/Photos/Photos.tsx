@@ -4,6 +4,7 @@ import "./photos.scss";
 import OnePhoto from "./components/One-photo";
 import { IPhotos } from "../../common/interfaces/Photos";
 import { MIN_DELAY, MAX_DELAY } from "../../common/constants/constants";
+import  {NUM_PHOTOS_TO_LOAD}  from "../../common/constants/constants";
 
 export default function Photos() {
   const [photos, setPhotos] = useState<IPhotos[]>([]);
@@ -25,7 +26,7 @@ export default function Photos() {
     // Emulate loading delay
     setTimeout(() => {
       // Generate an array of new ramson photos using faker library
-      const randomPhotos = Array.from({ length: 6 }, () => ({
+      const randomPhotos = Array.from({ length: NUM_PHOTOS_TO_LOAD }, () => ({
         url: faker.image.urlPicsumPhotos()
       }));
 
